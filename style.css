@@ -1,137 +1,343 @@
+@font-face {
+    font-family: 'blackjack';
+    src: url(blackjack.otf);
+}
+
+html {
+    background: url('https://static.vecteezy.com/system/resources/previews/035/261/379/large_2x/natural-wood-texture-background-surface-of-teak-wooden-desk-texture-free-photo.jpg') no-repeat center/cover;
+}
+
+p {
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    font-family: blackjack;
+    padding: 10px;
+    background: #fff;
+}
+
+p::selection {
+    background: yellow;
+    color: black;
+}
+
+p::first-line {
+    font-weight: bold;
+    color: darkred;
+}
+
+p:first-of-type {
+    margin-top: 0;
+}
+
+p:last-of-type,
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: blackjack;
+    font-size: 60px;
+    background: #fff;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro,
+#zen-requirements {
+    font-family: blackjack;
+    font-size: 18px;
+    color: darkgreen;
+    background: #e0f7fa;
+    border: 2px dashed darkgreen;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.intro::selection,
+#zen-requirements::selection {
+    background: yellow;
+    color: black;
+}
+
+#zen-requirements:root {
+    --main-bg-color: #e0f7fa;
+    --main-text-color: darkgreen;
+    --main-border-color: darkgreen;
+}
+
+#zen-requirements::before {
+    content: " (Please read carefully)";
+    font-style: italic;
+    color: darkred;
+}
+
+#zen-requirements ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+#zen-requirements li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#zen-requirements li:first-child {
+    margin-top: 0;
+}
+
+#zen-requirements li:last-child {
+    margin-bottom: 0;
+}
+
+#zen-requirements li::marker {
+    color: darkgreen;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    background: lightgrey;
+    border-top: 1px solid grey;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link {
+    color: darkred;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: square inside;
+    padding-left: 20px;
+}
+
+ul,
+ol {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.summary {
+    font-style: italic;
+    color: darkslategray;
+    background: #f0f4c3;
+    border-left: 4px solid darkslategray;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.summary::before {
+    content: "Note: ";
+    font-weight: bold;
+}
+
+.preamble {
+    font-weight: bold;
+    color: darkblue;
+    background: #d1c4e9;
+    border: 2px solid darkblue;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.preamble::after {
+    content: " (Important)";
+    font-style: italic;
+    color: darkred;
+}
+
+.explanation {
+    font-family: blackjack;
+    font-size: 18px;
+    color: darkorange;
+    background: #fff3e0;
+    border: 2px dotted darkorange;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.explanation::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: darkorange;
+}
+
+.participation,
+.benefits {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background: #e0f2f1;
+    border: 2px solid darkcyan;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.participation {
+    color: darkcyan;
+}
+
+.participation:hover {
+    background: #b2dfdb;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 0.3s;
+}
+
+.participation::before {
+    content: "Join us! ";
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.participation::after {
+    content: " (We value your input)";
+    font-style: italic;
+    color: darkred;
+}
+
+p.benefits {
+    font-family: blackjack;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: justify;
+    background: #f9f9f9;
+}
+
+.sidebar {
+    position: absolute;
+    top: 20px;
+    right: 800px;
+    width: 220px;
+    max-width: 250px;
+    padding: 10px;
+    background: #f2ea80;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: blackjack;
+    font-size: 14px;
+    color: #333;
+    z-index: 1000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 20;
+    padding: 20;
+    align-items: center;
+}
+
 body {
-    margin:0;
-    padding:0;
-    font:100%/1.4 verdana,Helvetica,sans-serif;
-    text-align:center;
-    }
-    
-    h1,h2 {
-    margin:0;
-    padding:0;
-    font:bold 2.4em/1.2 verdana,Helvetica,sans-serif;
-    color:#ffffff
-    }
-    
-    h3 {
-    height:38px;
-    margin:0;
-    padding:0;
-    font:bold 1.2em/1.4 verdana,Helvetica,sans-serif;
-    }
-    
-    p {margin:0;padding:0;}
-    
-    abbr {
-    border:none;
-    }
-    
-    a {
-    color:hsl(217, 100%, 50%);
-    background-color:#ffffff;
-    text-decoration:underline;
-    border-radius:4px;
-    padding:0 2px;
-    }
-    
-    a:hover, a:hover {
-    color:#16c5ff;
-    background-color:#ffffff;
-    text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    }
-    
-    
-    .page-wrapper {
+.page-wrapper {
+    width: 772px;
+    margin: 0 auto;
+    padding: 0 13px;
+    position: relative;
+    background: url(https://img.freepik.com/premium-photo/notebook-lined-paper-texture-background_35652-715.jpg?w=2000);
+    background-size: auto;
+    border: 1px solid #fff;
+    color: #454545;
+    text-align: left;
+}
 
-    margin:0 auto;
-    padding:0 13px;
-    position:relative;
-    color:#454545;
-    text-align:left;
-    width:772px;
+header {
+    padding: 20px 0;
+    text-align: center;
+}
 
-    }
-    
-    header {
-    width:772px;
-    height:178px;
-    background:url(top.jpg);
-    }
-    
-    .summary, .preamble, .explanation, .participation, .benefits, .requirements {
-    width:546px;
-    background-color:#ffffff;
-    background-repeat:repeat-y;
-    margin:0 0 6px 226px;
-    color:#0b0000;
-    display:block;padding:0;
-    border-radius:8px;
-    }
-    
-    footer {
-    width:539px;
-    margin:5px 0 0 226px;
-    text-align:right;
-    padding:3px 14px 43px 0;
-    }
-    
-    .sidebar {
-    position:absolute;
-    top:179px;
-    left:20px;
-    width:207px;
-    }
-    
-    .design-selection, .preamble p, .participation p, .requirements p, .design-archives, .zen-resources, .summary p, .explanation p, .benefits p{
-    margin: 0 7px 0;
-    }
-    
-    .sidebar li {
-    list-style:none;
-    padding:6px 0 10px 0;
-    }
-    
-    .sidebar li a {
-    padding-left:7px;
-    display:block;
-    color:#230808;
-    border-radius:8px;
-    background-color:#2db5ff;
-    text-decoration:none;
-    }
-    
-    .sidebar li a:hover {
-    text-decoration:underline;
-    }
-    
-    .design-selection li a {
-    display:block;
-    font-weight:bold;
-    background-position:0 0.6em;
-    }
-    
-    .design-selection a.designer-name {
-    display:inline;
-    color:#666666;
-    padding:0;
-    background:none;
-    background-color:#92caed;
-    }
-    
-    footer a{
-    text-decoration:none;
-    color:#888888;
-    background-color:#d4d4d4;
-    border:1px solid #bdbdbd;
-    padding:3px 3px;
-    height:100%;
-    }
-    
-    footer a:hover{
-    background-color:#ebebeb;
-    color:#777777;
-    }
-    
-   body {
-    background: linear-gradient(90deg,rgba(138, 42, 155, 1) 0%, rgba(199, 87, 87, 1) 50%, rgba(83, 237, 101, 1) 100%);
-   }
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #000;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    color: #333;
+}
+
+nav {
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    margin: 2px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: #ddd;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+:not(p) {
+    line-height: 1.6;
+}
+
+p:not(.intro):not(.summary):not(.preamble):not(.explanation):not(.participation):not(.benefits):not(#zen-requirements) {
+    font-family: blackjack;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: justify;
+    background: #f9f9f9;
+}
