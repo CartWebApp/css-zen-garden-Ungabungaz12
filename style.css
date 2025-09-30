@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'blackjack';
-    src: url(blackjack.otf);
+    src: url(TeachersPet.TTF) format('truetype');
 }
 
 html {
@@ -19,8 +19,7 @@ p {
 }
 
 p::selection {
-    background: yellow;
-    color: black;
+    text-decoration: underline;
 }
 
 p::first-line {
@@ -215,6 +214,8 @@ li {
     content: "Join us! ";
     font-weight: bold;
     color: darkcyan;
+    font-family: blackjack;
+    font-size: 200%;
 }
 
 .participation::after {
@@ -239,7 +240,6 @@ p.benefits {
     right: 800px;
     width: 220px;
     max-width: 250px;
-    padding: 10px;
     background: #f2ea80;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -264,11 +264,13 @@ p.benefits {
     color: #333;
     z-index: 1000;
 }
-.sidebar .wrapper{
+
+.sidebar .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 * {
     box-sizing: border-box;
     margin: 20;
@@ -362,7 +364,7 @@ p:not(.intro):not(.summary):not(.preamble):not(.explanation):not(.participation)
     background: #f9f9f9;
 }
 
-#zen-benefits{
+#zen-benefits {
     font-family: blackjack;
     font-size: 18px;
     color: darkgreen;
@@ -372,86 +374,96 @@ p:not(.intro):not(.summary):not(.preamble):not(.explanation):not(.participation)
     margin: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
-div > p{
+
+div>p {
     text-align: center;
 }
-p:focus
-{
-    background: yellow;
-    color: black;
+
+p:focus {
+    text-decoration: underline;
 }
-p:nth-child(1)
-{
+
+p:nth-child(1) {
     margin: 10px 0;
 }
-p:nth-last-child(2)
-{
+
+p:nth-last-child(2) {
     margin: 10px 0;
 }
-p:nth-last-of-type(2)
-{
+
+p:nth-last-of-type(2) {
     margin: 10px 0;
 }
-p:nth-of-type(2)
-{
+
+p:nth-of-type(2) {
     margin: 10px 0;
 }
-p:only-of-type
-{
+
+p:only-of-type {
     border: 3px solid red;
 }
-p:only-child
-{
+
+p:only-child {
     border: 3px solid blue;
 }
-div:empty
-{
+
+div:empty {
     display: none;
 }
-a:active
-{
+
+a:active {
     color: green;
 }
-div > p
-{
+
+div>p {
     text-align: center;
 }
-div + p
-{
+
+div+p {
     font-weight: bold;
 }
-p ~ ul
-{
+
+p~ul {
     margin-top: 10px;
 }
-[class="intro"]
-{
+
+[class="intro"] {
     background: #e0f7fa;
 }
-[id]{
+
+[id] {
     display: block;
 }
-[title="Cascading Style Sheets"]
-{
+
+[title="Cascading Style Sheets"] {
     text-decoration: underline;
 }
-[class~=zen]
-{
+
+[class~=zen] {
     font-style: italic;
 }
-[lang|="en"]
-{
+
+[lang|="en"] {
     color: darkblue;
 }
-a[href$=".com"]
-{
-    color: orange;
+
+a[href$=".com"] {
+    color: darkred;
 }
-a[href^="https"]
-{
+
+a[href^="https"] {
     font-weight: bold;
 }
-a[href*="zen"]
-{
+
+a[href*="zen"] {
     text-decoration: underline;
+}
+
+* {
+    font-family: blackjack;
+}
+
+
+body {
+    cursor: url('Cursor.png'), auto;
 }
