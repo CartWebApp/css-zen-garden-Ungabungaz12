@@ -4,7 +4,7 @@
 }
 
 html {
-    background: url('https://static.vecteezy.com/system/resources/previews/035/261/379/large_2x/natural-wood-texture-background-surface-of-teak-wooden-desk-texture-free-photo.jpg') no-repeat center/cover;
+    background: url('desk.jpg') no-repeat center/cover;
     scroll-behavior: smooth;
 }
 
@@ -522,5 +522,5 @@ body {
 }
 
 *:not(.sidebar) {
-    animation: slideIn 0.3s;
+    animation: slideIn 0.6s;
 }
